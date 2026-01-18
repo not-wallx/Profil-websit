@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعمالي الفنية - Wallx</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #0b1120; color: white; overflow-x: hidden; }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-open { transform: translateX(0) !important; }
+        
+        /* كلاس الشريط السفلي للكمبيوتر */
+        .active-desktop { border-bottom: 2px solid #06b6d4; color: white !important; padding-bottom: 4px; }
+        
+        /* كلاس الشريط الجانبي والخلفية للجوال */
+        .active-mobile { background-color: rgba(30, 41, 59, 0.8); border-right: 4px solid #06b6d4; color: white !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-6xl mx-auto flex justify-between items-center p-6 relative z-50">
+        <div class="text-xl font-bold text-cyan-500">wallx</div>
+        
+        <div id="desktop-links" class="hidden md:flex gap-8 items-center text-gray-400 text-sm">
+            <a href="homepage.html" class="nav-item transition flex items-center gap-2 hover:text-white">الرئيسية <i class="fa-solid fa-house"></i></a>
+            <a href="profilpage.html" class="nav-item transition flex items-center gap-2 hover:text-white">الملف الشخصي <i class="fa-solid fa-user"></i></a>
+            <a href="artworkpage.html" class="nav-item transition flex items-center gap-2 hover:text-white">أعمالي الفنية <i class="fa-solid fa-palette"></i></a>
+            <a href="projectspage.html" class="nav-item transition flex items-center gap-2 hover:text-white">المشاريع البرمجية <i class="fa-solid fa-code"></i></a>
+        </div>
+
+        <button id="open-menu" class="md:hidden text-cyan-500 text-2xl"><i class="fa-solid fa-bars-staggered"></i></button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0b1120] z-[100] translate-x-full flex flex-col p-6 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <button id="close-menu" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-xl font-bold text-cyan-500">wallx</div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <a href="homepage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>الرئيسية</span> <i class="fa-solid fa-house text-cyan-500"></i>
+            </a>
+            <a href="profilpage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>الملف الشخصي</span> <i class="fa-solid fa-user text-cyan-500"></i>
+            </a>
+            <a href="artworkpage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>أعمالي الفنية</span> <i class="fa-solid fa-palette text-cyan-500"></i>
+            </a>
+            <a href="projectspage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>المشاريع البرمجية</span> <i class="fa-solid fa-code text-cyan-500"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-6xl mx-auto py-10 px-4">
+        
+        <h1 class="text-4xl font-bold text-center mb-16 text-white">الرسومات والاعمال الفنية</h1>
+
+        <!-- Pixel Art Section -->
+        <div class="mb-20">
+            <div class="flex flex-col items-start mb-8 border-r-4 border-cyan-500 pr-4">
+                <h2 class="text-2xl font-bold text-cyan-400">Pixel Art</h2>
+                <p class="text-gray-400 text-sm">رسومات بكسل، شخصيات، ورسوم متحركة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Art Card 1 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="px1.png" alt="Art 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+
+                <!-- Art Card 2 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="px2.png" alt="Art 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+
+                <!-- Art Card 3 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="px3.png" alt="Art 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <div class="flex flex-col items-start mb-8 border-r-4 border-cyan-500 pr-4">
+                <h2 class="text-2xl font-bold text-cyan-400">Thumbnails</h2>
+                <p class="text-gray-400 text-sm">صور مصغرة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Art Card 1 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="1.jpg" alt="Art 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+
+                <!-- Art Card 2 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="2.jpg" alt="Art 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+
+                <!-- Art Card 3 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="3.jpg" alt="Art 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+                <!-- Art Card 4 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="4.png" alt="Art 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+                <!-- Art Card 5 -->
+                <div class="group relative bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-3xl overflow-hidden p-2 shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:-translate-y-2">
+                    <div class="aspect-video rounded-2xl overflow-hidden bg-slate-800">
+                        <img src="5.jpg" alt="Art 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <span class="text-xs text-cyan-500 font-mono"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Digital Art Section -->
+        <div>
+            <div class="flex flex-col items-start mb-8 border-r-4 border-cyan-500 pr-4">
+                <h2 class="text-2xl font-bold text-cyan-400">Digital Art</h2>
+                <p class="text-gray-400 text-sm">رسومات رقمية، لوحات، وملصقات.</p>
+            </div>
+            <div class="py-10 bg-slate-900/20 border border-dashed border-slate-700 rounded-3xl text-center">
+                <p class="text-gray-500 italic">قريباً... يتم العمل على معرض اللوحات الرقمية</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // 1. فتح وإغلاق القائمة
+        const menu = document.getElementById('mobile-menu');
+        document.getElementById('open-menu').onclick = () => menu.classList.add('menu-open');
+        document.getElementById('close-menu').onclick = () => menu.classList.remove('menu-open');
+
+        // 2. تمييز الصفحة الحالية تلقائياً (الشريط الأزرق)
+        function highlightActivePage() {
+            const currentFileName = window.location.pathname.split("/").pop() || "artworkpage.html";
+            const allLinks = document.querySelectorAll('.nav-item, .mobile-item');
+
+            allLinks.forEach(link => {
+                if (link.getAttribute('href') === currentFileName) {
+                    if (link.classList.contains('nav-item')) {
+                        link.classList.add('active-desktop');
+                    } else {
+                        link.classList.add('active-mobile');
+                    }
+                }
+            });
+        }
+
+        window.onload = highlightActivePage;
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallx Portfolio - الملف الشخصي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #0b1120; color: white; overflow-x: hidden; }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-open { transform: translateX(0) !important; }
+        
+        /* كلاس الشريط السفلي للكمبيوتر */
+        .active-desktop { border-bottom: 2px solid #06b6d4; color: white !important; padding-bottom: 4px; }
+        
+        /* كلاس الشريط الجانبي والخلفية للجوال */
+        .active-mobile { background-color: rgba(30, 41, 59, 0.8); border-right: 4px solid #06b6d4; color: white !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="w-full max-w-6xl mx-auto flex justify-between items-center p-6 relative z-50">
+        <div class="text-xl font-bold text-cyan-500">wallx</div>
+        
+        <div id="desktop-links" class="hidden md:flex gap-8 items-center text-gray-400 text-sm">
+            <a href="homepage.html" class="nav-item transition flex items-center gap-2">الرئيسية <i class="fa-solid fa-house"></i></a>
+            <a href="profilpage.html" class="nav-item transition flex items-center gap-2">الملف الشخصي <i class="fa-solid fa-user"></i></a>
+            <a href="artworkpage.html" class="nav-item transition flex items-center gap-2">أعمالي الفنية <i class="fa-solid fa-palette"></i></a>
+            <a href="projectspage.html" class="nav-item transition flex items-center gap-2">المشاريع البرمجية <i class="fa-solid fa-code"></i></a>
+        </div>
+
+        <button id="open-menu" class="md:hidden text-cyan-500 text-2xl"><i class="fa-solid fa-bars-staggered"></i></button>
+    </nav>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0b1120] z-[100] translate-x-full flex flex-col p-6 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <button id="close-menu" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-xl font-bold text-cyan-500">wallx</div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <a href="homepage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>الرئيسية</span> <i class="fa-solid fa-house text-cyan-500"></i>
+            </a>
+            <a href="profilpage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>الملف الشخصي</span> <i class="fa-solid fa-user text-cyan-500"></i>
+            </a>
+            <a href="artworkpage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>أعمالي الفنية</span> <i class="fa-solid fa-palette text-cyan-500"></i>
+            </a>
+            <a href="projectspage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>المشاريع البرمجية</span> <i class="fa-solid fa-code text-cyan-500"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي (هنا تم وضع الكود الخاص بك) -->
+    <main class="min-h-[80vh] flex items-center justify-center p-4">
+        <div class="w-full max-w-5xl">
+            <h1 class="text-3xl font-bold mb-10 text-center">الملف الشخصي</h1>
+            <div class="bg-slate-900/60 backdrop-blur-md border border-white/5 rounded-[2rem] p-8 md:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-right">
+                    <div>
+                        <h3 class="text-cyan-400 text-xl font-bold mb-6 border-b border-cyan-900/40 pb-3">نبذة عني</h3>
+                        <p class="text-gray-300 leading-7 text-sm">
+                            مطور متخصص في بناء تطبيقات ويب حديثة وألعاب ثنائية الأبعاد. أمتلك خبرة في تحويل الأفكار إلى واقع رقمي ملموس.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-cyan-400 text-xl font-bold mb-6 border-b border-cyan-900/40 pb-3">المهارات والأدوات</h3>
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <div class="bg-slate-800 p-2 rounded-lg">HTML5 <i class="fa-brands fa-html5 text-orange-500"></i></div>
+                            <div class="bg-slate-800 p-2 rounded-lg">CSS3 <i class="fa-brands fa-css3-alt text-blue-500"></i></div>
+                            <div class="bg-slate-800 p-2 rounded-lg">JavaScript <i class="fa-brands fa-js text-yellow-400"></i></div>
+                            <div class="bg-slate-800 p-2 rounded-lg">Godot <i class="fa-solid fa-robot text-blue-400"></i></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-cyan-400 text-xl font-bold mb-6 border-b border-cyan-900/40 pb-3">الاهتمامات</h3>
+                        <ul class="space-y-4 text-sm text-gray-300">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle text-[6px] text-cyan-500"></i> تطوير الألعاب</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle text-[6px] text-cyan-500"></i> الفن الرقمي</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle text-[6px] text-cyan-500"></i> <span id="typed-profile"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- السكربتات -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // 1. فتح وإغلاق القائمة
+        const menu = document.getElementById('mobile-menu');
+        document.getElementById('open-menu').onclick = () => menu.classList.add('menu-open');
+        document.getElementById('close-menu').onclick = () => menu.classList.remove('menu-open');
+
+        // 2. تمييز الصفحة الحالية تلقائياً
+        function highlightActivePage() {
+            const currentFileName = window.location.pathname.split("/").pop() || "index.html";
+            const allLinks = document.querySelectorAll('.nav-item, .mobile-item');
+
+            allLinks.forEach(link => {
+                if (link.getAttribute('href') === currentFileName) {
+                    if (link.classList.contains('nav-item')) {
+                        link.classList.add('active-desktop');
+                    } else {
+                        link.classList.add('active-mobile');
+                    }
+                }
+            });
+        }
+
+        // 3. تشغيل Typed.js
+        new Typed('#typed-profile', {
+            strings: ['الرسوم المتحركة', 'البرمجة الإبداعية'],
+            typeSpeed: 60, 
+            loop: true,
+            backSpeed: 30,
+            backDelay: 2000
+        });
+
+        window.onload = highlightActivePage;
+    </script>
+</body>
+</html>

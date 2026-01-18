@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallx | المشاريع البرمجية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #0b1120; color: white; overflow-x: hidden; }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-open { transform: translateX(0) !important; }
+        .active-desktop { border-bottom: 2px solid #06b6d4; color: white !important; padding-bottom: 4px; }
+        .active-mobile { background-color: rgba(30, 41, 59, 0.8); border-right: 4px solid #06b6d4; color: white !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="w-full max-w-6xl mx-auto flex justify-between items-center p-6 relative z-50">
+        <div class="text-xl font-bold text-cyan-500">wallx</div>
+        
+        <div id="desktop-links" class="hidden md:flex gap-8 items-center text-gray-400 text-sm">
+            <a href="homepage.html" class="nav-item transition flex items-center gap-2">الرئيسية <i class="fa-solid fa-house"></i></a>
+            <a href="profilpage.html" class="nav-item transition flex items-center gap-2">الملف الشخصي <i class="fa-solid fa-user"></i></a>
+            <a href="artworkpage.html" class="nav-item transition flex items-center gap-2">أعمالي الفنية <i class="fa-solid fa-palette"></i></a>
+            <a href="projectspage.html" class="nav-item transition flex items-center gap-2">المشاريع البرمجية <i class="fa-solid fa-code"></i></a>
+        </div>
+
+        <button id="open-menu" class="md:hidden text-cyan-500 text-2xl"><i class="fa-solid fa-bars-staggered"></i></button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0b1120] z-[100] translate-x-full flex flex-col p-6 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <button id="close-menu" class="text-2xl text-white"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-xl font-bold text-cyan-500">wallx</div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <a href="homepage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>الرئيسية</span> <i class="fa-solid fa-house text-cyan-500"></i>
+            </a>
+            <a href="profilpage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>الملف الشخصي</span> <i class="fa-solid fa-user text-cyan-500"></i>
+            </a>
+            <a href="artworkpage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>أعمالي الفنية</span> <i class="fa-solid fa-palette text-cyan-500"></i>
+            </a>
+            <a href="projectspage.html" class="mobile-item flex items-center justify-between p-4 rounded-xl text-gray-400 transition">
+                <span>المشاريع البرمجية</span> <i class="fa-solid fa-code text-cyan-500"></i>
+            </a>
+        </div>
+    </div>
+
+    <main class="min-h-[70vh] flex flex-col items-center justify-start p-4 py-10">
+        
+        <div class="w-full max-w-5xl mx-auto">
+            <h1 class="text-3xl font-bold mb-12 text-right border-r-4 border-cyan-500 pr-4">المشاريع البرمجية</h1>
+
+            <div class="flex flex-col gap-10">
+                <div class="bg-[#111a2e] border border-white/5 rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row-reverse shadow-2xl relative transition-all duration-500 hover:shadow-cyan-500/5">
+                    
+                    <div class="absolute top-6 right-6 z-20 bg-yellow-500 text-black text-[11px] font-bold px-4 py-1.5 rounded-full flex items-center gap-2 animate-pulse">
+                        <i class="fa-solid fa-hammer"></i> <span>قيد التطوير</span>
+                    </div>
+
+                    <div class="md:w-3/5 h-72 md:h-auto overflow-hidden relative group">
+                        <div class="absolute inset-0 bg-blue-900/10 z-10"></div>
+                        <img src="game1.png" class="w-full h-full object-cover grayscale opacity-40">
+                    </div>
+
+                    <div class="md:w-2/5 p-8 md:p-12 flex flex-col justify-center items-end text-right">
+                        <span class="bg-cyan-950/40 text-cyan-400 text-[10px] px-4 py-1 rounded-full mb-5 border border-cyan-500/20 font-bold tracking-widest">PROJECT TYPE: GAME 2D</span>
+                        <h3 class="text-3xl font-bold mb-4 text-white">مشروع قيد البناء </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8">يتم بناء هذه اللعبة حالياً باستخدام محرك Godot. نركز على تطوير ميكانيكا الحركة بـ GDScript وتصميم عوالم Pixel Art.</p>
+
+                        <div class="flex gap-3 mb-10 flex-wrap justify-end">
+                            <span class="bg-[#1e293b] text-cyan-400 text-[10px] px-3 py-1.5 rounded-lg border border-white/5 font-mono">Godot 2D</span>
+                            <span class="bg-[#1e293b] text-cyan-400 text-[10px] px-3 py-1.5 rounded-lg border border-white/5 font-mono">GDScript</span>
+                        </div>
+
+                        <div class="w-full bg-[#0b1120]/80 backdrop-blur-md p-6 rounded-[1.5rem] border border-white/5">
+                            <p class="text-[10px] text-gray-500 mb-4 font-bold tracking-[0.2em] text-center uppercase">Estimated Release In</p>
+                            <div id="countdown" class="flex justify-center items-center gap-4 text-white"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // 1. القائمة الجانبية
+        const menu = document.getElementById('mobile-menu');
+        document.getElementById('open-menu').onclick = () => menu.classList.add('menu-open');
+        document.getElementById('close-menu').onclick = () => menu.classList.remove('menu-open');
+
+        // 2. تمييز الصفحة الحالية
+        function highlightActivePage() {
+            const currentFileName = window.location.pathname.split("/").pop() || "homepage.html";
+            const allLinks = document.querySelectorAll('.nav-item, .mobile-item');
+            allLinks.forEach(link => {
+                if (link.getAttribute('href') === currentFileName) {
+                    if (link.classList.contains('nav-item')) link.classList.add('active-desktop');
+                    else link.classList.add('active-mobile');
+                }
+            });
+        }
+        window.onload = highlightActivePage;
+
+        // 3. العداد التنازلي (حتى 30 يونيو 2026)
+        const targetDate = new Date("July 1, 2026 00:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = `
+                <div class="text-center"><span class="block text-2xl font-black">${s < 10 ? '0'+s : s}</span><span class="text-[9px] text-gray-500 font-bold">SEC</span></div>
+                <div class="text-gray-700 text-xl font-light mb-4">:</div>
+                <div class="text-center"><span class="block text-2xl font-black">${m < 10 ? '0'+m : m}</span><span class="text-[9px] text-gray-500 font-bold">MIN</span></div>
+                <div class="text-gray-700 text-xl font-light mb-4">:</div>
+                <div class="text-center"><span class="block text-2xl font-black">${h < 10 ? '0'+h : h}</span><span class="text-[9px] text-gray-500 font-bold">HRS</span></div>
+                <div class="text-gray-700 text-xl font-light mb-4">:</div>
+                <div class="text-center"><span class="block text-2xl font-black">${d}</span><span class="text-[9px] text-gray-500 font-bold">DAYS</span></div>
+            `;
+        }, 1000);
+    </script>
+</body>
+</html>
